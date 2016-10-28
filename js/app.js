@@ -3,7 +3,10 @@ console.log("js file connected");
 
 $(document).ready(function() {
 
-var $ clicklableBoxes = $('div.row');
+var $clicklableBoxes = $('.clicklableBox');
 
+   $clicklableBoxes.on("click", function () {
+       console.log("You have clicked");
+   });
 
 });
