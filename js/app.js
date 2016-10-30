@@ -3,15 +3,23 @@ console.log("js file connected");
 
 $(document).ready(function() {
 
-  var playerOne= "x";
+  var playerOne= 1;
   var playerTwo=0;
   var currentPlayer=" " ;
 
+  var clickedbox = clicklableBoxes.eq();
+
 var $clicklableBoxes = $('.box');
 
-   $clicklableBoxes.on("click", function () {
+ $clicklableBoxes.on("click", function () {
 
-     return playerOne;
+      if ( playerOne===currentPlayer){
+
+
+      } else if (playerTwo===currentPlayer) {
+
+        
+      }
 
 })
    });
