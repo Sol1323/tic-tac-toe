@@ -3,10 +3,15 @@ console.log("js file connected");
 
 $(document).ready(function() {
 
-var $clicklableBoxes = $('.clicklableBox');
+  var playerOne= "x";
+  var playerTwo=0;
+  var currentPlayer=" " ;
+
+var $clicklableBoxes = $('.box');
 
    $clicklableBoxes.on("click", function () {
-       console.log("You have clicked");
-   });
 
-});
+     return playerOne;
+
+})
+   });
