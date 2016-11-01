@@ -3,23 +3,28 @@ console.log("js file connected");
 
 $(document).ready(function() {
 
-  var playerOne= 1;
-  var playerTwo=0;
-  var currentPlayer=" " ;
-
-  var clickedbox = clicklableBoxes.eq();
-
-var $clicklableBoxes = $('.box');
-
- $clicklableBoxes.on("click", function () {
-
-      if ( playerOne===currentPlayer){
+var clicklableBoxes= $('.box');
+//PLAYERS
+  var turn = "X";
 
 
-      } else if (playerTwo===currentPlayer) {
 
-        
+  //CHANGE TURNS
+  
+
+
+//ACTION VARIABLES
+  //var $clickedbox = $clicklableBoxes.eq();
+
+
+//PLAY ON
+ $clicklableBoxes.on("click", function() {
+
+      if ( boxEmpty){
+
+        input x or O;
+
       }
 
-})
-   });
+ });
+});
