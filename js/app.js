@@ -14,9 +14,25 @@ var clicklableBoxes= $('.box');
     if (turn === "X"){
       turn = "O";
     } else {
-      turn = "X";  
+      turn = "X";
     }
   };
+
+//FUNTION TO CHECK IF THE BOARD IS FULL
+function boardHasEmptyBoxes () {
+
+  var hasEmptyBoxes = false;
+
+  for (var i=0; i<$clicklableBoxes.length; i++){
+     if ($clicklableBoxes.eq(i).text() === ''){
+
+        hasEmptyBoxes = true;
+     }
+  }
+    return hasEmptyBoxes;
+}
+
+
 
 
 //ACTION VARIABLES
