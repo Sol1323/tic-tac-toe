@@ -10,7 +10,13 @@ var clicklableBoxes= $('.box');
 
 
   //CHANGE TURNS
-  
+  function changeTurn(){
+    if (turn === "X"){
+      turn = "O";
+    } else {
+      turn = "X";  
+    }
+  };
 
 
 //ACTION VARIABLES
