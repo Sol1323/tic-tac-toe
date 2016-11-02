@@ -97,6 +97,13 @@ function rowWinner() {
     return topRow || (middleRow || bottomRow);
   };
 
+//Function to check the winner by comparing each one of the combo possibilities with an or operator
+function getWinner() {
+  return diagonalWinner() || (rowWinner() || columnWinner());
+};
+
+
+
 //PLAY ON
  $boxes.on('click', function() {
 
