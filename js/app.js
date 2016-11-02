@@ -75,6 +75,17 @@ function diagonalWinner() {
   return leftDownDiag || rightUpDiag;
 };
 
+//This will check if there is a column match for winning
+//We need to check the index of each box by using the the .eq method
+
+function columnWinner() {
+    var leftCol = allThree($boxes.eq(0), $boxes.eq(3), $boxes.eq(6));
+    var middleCol = allThree($boxes.eq(1), $boxes.eq(4), $boxes.eq(7));
+    var rightCol = allThree($boxes.eq(2), $boxes.eq(5), $boxes.eq(8));
+
+//Since there are three possible column winning, we need to use the or operator but compare them two at a time
+    return leftCol || (middleCol || rightCol);
+  };
 
 
 //PLAY ON
