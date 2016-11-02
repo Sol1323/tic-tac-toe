@@ -87,6 +87,15 @@ function columnWinner() {
     return leftCol || (middleCol || rightCol);
   };
 
+//Checks for the winning combo for each row
+
+function rowWinner() {
+    var topRow = allThree($boxes.eq(0), $boxes.eq(1), $boxes.eq(2));
+    var middleRow = allThree($boxes.eq(3), $boxes.eq(4), $boxes.eq(5));
+    var bottomRow = allThree($boxes.eq(6), $boxes.eq(7), $boxes.eq(8));
+
+    return topRow || (middleRow || bottomRow);
+  };
 
 //PLAY ON
  $boxes.on('click', function() {
