@@ -42,7 +42,22 @@ function boardHasEmptyBoxes () {
     return hasEmptyBoxes;
 }
 
-//
+//DEFINE A FUNCTION THAT SEES IF THERE IS AN X OR O AS AN ARGUMENT IN EACH ROW
+//SET IT TO INPUT THE STRING X OR O
+function checkRow ($boxOne, $boxTwo, $boxThree) {
+  var boxOneOwner = $boxOne.text();
+  var boxTwoOwner = $boxTwo.text();
+  var boxThreeOwner = $boxThree.text();
+
+    if  ((boxOneOwner === boxTwoOwner) && (boxTwoOwner === boxThreeOwner)){
+       if (boxOneOwner === "X") {
+           return "X";
+         } else if (boxOneOwner === "O")
+         return "O";
+       }
+    }
+  return null;
+};
 
 
 //FUNCTION TO CHECK FOR THE WINNER
