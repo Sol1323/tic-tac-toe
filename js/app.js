@@ -60,7 +60,20 @@ function checkRow ($boxOne, $boxTwo, $boxThree) {
 };
 
 
-//FUNCTION TO CHECK FOR THE WINNER
+//FUNCTION TO CHECK FOR THE WINNER COMBO SET.
+//You can win having a X or O in in a row combo set of three boxes.
+//
+
+function diagonalWinner() {
+  //This will check if there is a diagonal match
+  //We need to check the index of each box by using the the .eq method
+  var leftDownDiag = checkRow($boxes.eq(0), $boxes.eq(4), $boxes.eq(8));
+  var rightUpDiag = checkRow($boxes.eq(2), $boxes.eq(4), $boxes.eq(6));
+
+  //Using the || operator let us compare if there is a match in either ways there is a winner
+
+  return leftDownDiag || rightUpDiag;
+};
 
 
 
