@@ -16,7 +16,7 @@ function resetGame(){
 
   turn = "X";
 
-}
+};
 
 
   //CHANGE TURNS
