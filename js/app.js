@@ -3,10 +3,20 @@ console.log("js file connected");
 
 $(document).ready(function() {
 
-var clicklableBoxes= $('.box');
+var $boxes= $('.box');
 //PLAYERS
   var turn = "X";
 
+//TO RESET GAME
+
+function resetGame(){
+  $boxes.text("");
+  $boxes.removeClass("X");
+  $boxes.removeClass("O");
+
+  turn = "X";
+
+}
 
 
   //CHANGE TURNS
@@ -23,8 +33,8 @@ function boardHasEmptyBoxes () {
 
   var hasEmptyBoxes = false;
 
-  for (var i=0; i<$clicklableBoxes.length; i++){
-     if ($clicklableBoxes.eq(i).text() === ''){
+  for (var i=0; i<$boxes.length; i++){
+     if ($boxes.eq(i).text() === ''){
 
         hasEmptyBoxes = true;
      }
@@ -32,19 +42,32 @@ function boardHasEmptyBoxes () {
     return hasEmptyBoxes;
 }
 
+//
 
 
+//FUNCTION TO CHECK FOR THE WINNER
 
-//ACTION VARIABLES
-  //var $clickedbox = $clicklableBoxes.eq();
 
 
 //PLAY ON
- $clicklableBoxes.on("click", function() {
+ $boxes.on('click', function() {
 
-      if ( boxEmpty){
+      if ($(this).text() === ""){
 
-        input x or O;
+          $(this).text(turn);
+          $(this).addClass(turn);
+
+          var winner = getWinner();
+          if (winner) {
+            alert("Player " + winner + " won!");
+            resetGame();
+          } else if (boardHasEmptyBoxes()) {
+            changeTurn();
+
+          } else {
+            alert("Boooo! Nobody won! Let's play again!")
+            resetGame();
+          }
 
       }
 
